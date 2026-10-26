@@ -1,0 +1,6 @@
+{
+  "incidentId": "INC1004",
+  "customer": "Demo Corp",
+  "severity": "CRITICAL",
+  "description": "System down - invalid severity test payload"
+}

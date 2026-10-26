@@ -1,0 +1,8 @@
+{
+  "status": "SUCCESS",
+  "message": "Incident Created Successfully",
+  "incidentId": "INC1001",
+  "priority": "P1",
+  "assignedTeam": "L1 Support",
+  "sla": "4 Hours"
+}

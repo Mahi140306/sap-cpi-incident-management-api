@@ -1,0 +1,6 @@
+{
+  "incidentId": "INC1001",
+  "customer": "ABC Corp",
+  "severity": "HIGH",
+  "description": "Order Processing Failed - Production DB connection timed out"
+}

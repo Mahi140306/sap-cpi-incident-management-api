@@ -1,0 +1,129 @@
+{
+  "info": {
+    "name": "SAP CPI Incident Management API",
+    "description": "Collection for testing the SAP CPI / Integration Suite Incident Management Real-Time REST API.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "cpi_base_url",
+      "value": "https://<your-cpi-tenant-runtime>.it-cpi001-rt.cfapps.<region>.hana.ondemand.com",
+      "type": "string"
+    },
+    {
+      "key": "endpoint_path",
+      "value": "/http/incident/create",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Create Incident - HIGH Severity (P1)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n   \"incidentId\": \"INC1001\",\n   \"customer\": \"ABC Corp\",\n   \"severity\": \"HIGH\",\n   \"description\": \"Order Processing Failed\"\n}"
+        },
+        "url": {
+          "raw": "{{cpi_base_url}}{{endpoint_path}}",
+          "host": [
+            "{{cpi_base_url}}"
+          ],
+          "path": [
+            "http",
+            "incident",
+            "create"
+          ]
+        }
+      }
+    },
+    {
+      "name": "2. Create Incident - MEDIUM Severity (P2)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n   \"incidentId\": \"INC1002\",\n   \"customer\": \"XYZ Logistics\",\n   \"severity\": \"MEDIUM\",\n   \"description\": \"SAP Login latency during peak hours\"\n}"
+        },
+        "url": {
+          "raw": "{{cpi_base_url}}{{endpoint_path}}",
+          "host": [
+            "{{cpi_base_url}}"
+          ],
+          "path": [
+            "http",
+            "incident",
+            "create"
+          ]
+        }
+      }
+    },
+    {
+      "name": "3. Create Incident - LOW Severity (P3)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n   \"incidentId\": \"INC1003\",\n   \"customer\": \"Global Retail Ltd\",\n   \"severity\": \"LOW\",\n   \"description\": \"Printer configuration reset required\"\n}"
+        },
+        "url": {
+          "raw": "{{cpi_base_url}}{{endpoint_path}}",
+          "host": [
+            "{{cpi_base_url}}"
+          ],
+          "path": [
+            "http",
+            "incident",
+            "create"
+          ]
+        }
+      }
+    },
+    {
+      "name": "4. Negative Test - Invalid Severity (Expect 400 Bad Request)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n   \"incidentId\": \"INC1004\",\n   \"customer\": \"Demo Corp\",\n   \"severity\": \"CRITICAL\",\n   \"description\": \"Invalid severity test to trigger Exception Subprocess\"\n}"
+        },
+        "url": {
+          "raw": "{{cpi_base_url}}{{endpoint_path}}",
+          "host": [
+            "{{cpi_base_url}}"
+          ],
+          "path": [
+            "http",
+            "incident",
+            "create"
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "status": "FAILED",
+  "errorCode": 400,
+  "message": "Invalid Severity. Allowed values are HIGH, MEDIUM and LOW."
+}

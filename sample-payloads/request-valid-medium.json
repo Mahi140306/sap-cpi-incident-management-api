@@ -1,0 +1,6 @@
+{
+  "incidentId": "INC1002",
+  "customer": "XYZ Logistics",
+  "severity": "MEDIUM",
+  "description": "SAP Login latency during peak hours"
+}
