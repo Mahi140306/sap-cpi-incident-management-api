@@ -3,7 +3,6 @@
 [![SAP CPI](https://img.shields.io/badge/SAP-Cloud%20Integration-0070F2?logo=sap&logoColor=white)](#)
 [![Groovy](https://img.shields.io/badge/Language-Groovy-4298B8?logo=apachegroovy&logoColor=white)](#)
 [![REST API](https://img.shields.io/badge/API-REST%20%2F%20JSON-brightgreen)](#)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 An enterprise-ready **Real-Time Incident Management REST API** built on **SAP Cloud Integration (CPI) / SAP Integration Suite** (using SAP BTP Trial). 
 
@@ -21,7 +20,6 @@ This project simulates a production-grade enterprise scenario where incident tic
 - [Sample Payloads & HTTP Codes](#-sample-payloads--http-codes)
 - [Postman Testing Guide](#-postman-testing-guide)
 - [Setup & Deployment](#-setup--deployment)
-- [License](#-license)
 
 ---
 
@@ -109,7 +107,6 @@ In enterprise environments, users and downstream systems report technical, opera
 │   ├── response-error-400.json             # Expected HTTP 400 JSON
 │   └── response-error-500.json             # Expected HTTP 500 JSON
 ├── .gitignore
-├── LICENSE
 └── README.md
 ```
 
@@ -258,8 +255,3 @@ def Message processData(Message message) {
 5. Recreate the flow components following [docs/iflow-design.md](docs/iflow-design.md).
 6. Upload the scripts from the `groovy-scripts/` directory to the iFlow's **Resources** tab.
 7. Save, Deploy, and Monitor execution via **Operations and Monitoring > Manage Message Processing**.
-
----
-
-## 📄 License
-This project is licensed under the [MIT License](LICENSE).
